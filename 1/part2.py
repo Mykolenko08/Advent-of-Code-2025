@@ -1,19 +1,14 @@
-﻿a = 50
+a = 1000000000 + 50
 zeros = 0
-
 while True:
-    move = input("Ln/Rn: ").strip()
-
+    move = input("Ln/Rn: ")
     m = int(move[1:])
-    old = a
-
-    if move[0] == "L":
-        zeros = zeros + (m - old + 99) // 100
-        a = (a - m) % 100
-
-    else:
-        zeros = zeros + (old + m) // 100
-        a = (a + m) % 100
-
-    print(a)
+    for i in range(m):
+        if "L" in move:
+            a = a - 1
+        else:
+            a = a + 1
+        if a % 100 == 0:
+            zeros = zeros + 1
+    print(a % 100)
     print(f"Нулів: {zeros}")
