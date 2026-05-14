@@ -18,7 +18,7 @@ for start, end in ranges:
 
 print(tocheck)
 
-approved = []
+invalid = []
 
 for num in tocheck:
     text = str(num)
@@ -26,17 +26,16 @@ for num in tocheck:
     if len(text) % 2 == 0:
         half = len(text) // 2
 
-        if text[:half] != text[half:]:
-            approved.append(num)
-    else:
-        approved.append(num)
+        if text[:half] == text[half:]:
+            invalid.append(num)
 
 print("===============")
-print(approved)
-print("===============")
+print(invalid)
 
 sum = 0
 
-for i in range(len(approved)):
-    sum = sum + approved[i]
+for i in range(len(invalid)):
+    sum = sum + invalid[i]
+
+print("===============")
 print(sum)
