@@ -2,6 +2,8 @@ data_line = str("")
 data = str("")
 wbreaker = 0
 
+row = 138+2 #row lenght + 2 dots on the sides
+
 data = str(data+"............................................................................................................................................")
 
 print("Input data lines. 'next' on a blank line - continue to computing")
@@ -15,10 +17,6 @@ while wbreaker == 0:
 		data = str(data+"."+data_line+".")
 
 print(data)
-
-row = 138+2 #row lenght + 2 dots on the sides
-
-paper_ids = []
 
 print("Analysis:")
 
